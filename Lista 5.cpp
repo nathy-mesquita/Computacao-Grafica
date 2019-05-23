@@ -1,8 +1,6 @@
-/*
+/*Este programa exibe:
 Ao digitar 1 exiba uma função do primeiro grau
-
 Ao digitar 2 exiba uma função do segundo grau
-
 Ao digitar 3 exiba uma função da sua escolha*/
 
 #include <cmath>

@@ -1,11 +1,9 @@
 /*
-Programa 01 – Computação Gráfica
 Este programa exibe um desenho na tela (predefinido) */
 
 #include <glut.h>
 /*
-void redesenha()
-{
+void redesenha(){
 	glClearColor(1.0, 1.0, 1.0, 0.0);
 	//Tinta.
 	// branco 1 - preto 0 (R,G,B,T) - Transparencia 
@@ -30,8 +28,7 @@ void redesenha()
 }
 */
 /*
-void main(int argc, char **argv)
-{
+void main(int argc, char **argv){
 	glutInit(&argc, argv);
 	// Este comando é utilizado para iniciar a biblioteca GLUT.
 	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGBA | GLUT_DEPTH);

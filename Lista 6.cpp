@@ -8,20 +8,15 @@ objetos também devem voltar para cor azul.*/
 
 /*
 #include <stdio.h>
-
 #include <glut.h>
 
 float DIM = 400;
-
 float size = 40;
 
 int aux = 0;
-
 float R = 0, G = 0, B = 1;
 
-void objeto1()
-
-{
+void objeto1(){
 
 	glColor3f(R, G, B);
 
@@ -39,9 +34,7 @@ void objeto1()
 */
 
 /*
-void objeto2()
-
-{
+void objeto2(){
 
 	glColor3f(R, G, B);
 
@@ -60,9 +53,7 @@ void objeto2()
 }
 */
 /*
-void redesenha()
-
-{
+void redesenha(){
 
 	glClearColor(1, 1, 1, 1);
 
@@ -81,73 +72,39 @@ void redesenha()
 }
 */
 /*
-void teclado(unsigned char key, int x, int y)
+void teclado(unsigned char key, int x, int y){
 
-{
-
-	switch (key)
-
-	{
-
+	switch (key){
 	case '1':
-
 		aux = 1;
-
 		break;
-
 	case '2':
-
 		aux = 2;
-
 		break;
-
 	case 'r':
-
 		aux = 0;
-
 		R = 0; G = 0; B = 1;
-
 		break;
-
 	case 'R':
-
 		aux = 0;
-
 		R = 0; G = 0; B = 1;
-
 		break;
-
 	}
-
 	redesenha();
-
 }
 */
 /*
-void mouse(int button, int state, int x, int y)
+void mouse(int button, int state, int x, int y){
 
-{
-
-	switch (button)
-
-	{
-
+	switch (button){
 	case GLUT_LEFT_BUTTON:
-
-		R = 0; G = 1; B = 0;
-
-		redesenha();
-
-		break;
-
+	R = 0; G = 1; B = 0;
+	redesenha();
+	break;
 	case GLUT_RIGHT_BUTTON:
-
-		R = 1; G = 0; B = 0;
-
-		redesenha();
-
-		break;
-
+	R = 1; G = 0; B = 0;
+	redesenha();
+	break;
 	}
 
 }
@@ -156,25 +113,13 @@ void mouse(int button, int state, int x, int y)
 void main(int argc, char **argv) {
 
 	glutInit(&argc, argv);
-
 	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGBA | GLUT_DEPTH);
-
 	glutInitWindowSize(DIM, DIM);
-
 	glutInitWindowPosition(200, 200);
-
 	glutCreateWindow("Clique Mouse");
-
 	gluOrtho2D(-size, size, -size, size);
-
 	glutDisplayFunc(redesenha);
-
 	glutMouseFunc(mouse);
-
 	glutKeyboardFunc(teclado);
-
 	glutMainLoop();
-
-
-
 }*/
