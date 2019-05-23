@@ -1,5 +1,4 @@
-/*
-Este programa exibe um desenho na tela (predefinido) */
+/*Este programa exibe um desenho na tela (predefinido) */
 
 #include <glut.h>
 /*
@@ -9,7 +8,7 @@ void redesenha(){
 	// branco 1 - preto 0 (R,G,B,T) - Transparencia 
 	//Indica cor para ser utilizada no fundo da tela.
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); //Pincel
-														// Pinta os buffers indicados com a cor do glClearColor()
+	// Pinta os buffers indicados com a cor do glClearColor()
 	glColor3f(1.0, 0.5, 0.5);
 	// Define o vermelho como cor atual.
 	glPointSize(4.0);

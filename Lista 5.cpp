@@ -9,8 +9,6 @@ Ao digitar 3 exiba uma função da sua escolha*/
 int aux = 1;
 int aux2 = 0;
 
-
-
 void Eixo() {
 
 	glBegin(GL_LINES);

@@ -17,56 +17,34 @@ int aux = 0;
 float R = 0, G = 0, B = 1;
 
 void objeto1(){
-
 	glColor3f(R, G, B);
-
 	glBegin(GL_POLYGON);
-
 	glVertex2f(-20, -20);
-
 	glVertex2f(20, -20);
-
 	glVertex2f(0, 20);
-
 	glEnd();
-
 }
 */
 
 /*
 void objeto2(){
-
 	glColor3f(R, G, B);
-
 	glBegin(GL_POLYGON);
-
 	glVertex2f(-20, -20);
-
 	glVertex2f(20, -20);
-
 	glVertex2f(20, 20);
-
 	glVertex2f(-20, 20);
-
 	glEnd();
-
 }
 */
 /*
 void redesenha(){
-
 	glClearColor(1, 1, 1, 1);
-
 	glClear(GL_COLOR_BUFFER_BIT);
-
 	if (aux == 1)
-
 		objeto1();
-
 	if (aux == 2)
-
 		objeto2();
-
 	glFlush();
 
 }
