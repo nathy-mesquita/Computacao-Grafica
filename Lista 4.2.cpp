@@ -1,4 +1,4 @@
-#include <glut.h>
+/*#include <glut.h>
 
 
 
@@ -65,3 +65,4 @@ void main(int argc, char **argv) {
 	glutMainLoop();
 
 }
+*/

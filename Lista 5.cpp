@@ -1,100 +1,129 @@
-/*Inicialmente o usuário veja uma tela branca.
-Ao digitar em 1 exiba um triângulo azul.
-Ao digitar em 2 exiba um quadrilátero azul.
-Ao clicar com o botão direito do mouse a cor do objeto para vermelho.
-Ao clicar com o botão esquerdo do mouse a cor do objeto para verde.
-Ao clicar em R, o programa volte para o estágio inicial, ou seja tela branca e os
-objetos também devem voltar para cor azul.*/
+/*
+Ao digitar 1 exiba uma função do primeiro grau
 
+Ao digitar 2 exiba uma função do segundo grau
 
-#include <stdio.h>
+Ao digitar 3 exiba uma função da sua escolha*/
+#include <cmath>
 #include <glut.h>
 
-/*
-float DIM = 400;
-float size = 40;
-int aux = 0;
-float R = 0, G = 0, B = 1;
-void objeto1()
-{
-	glColor3f(R, G, B);
-	glBegin(GL_POLYGON);
-	glVertex2f(-20, -20);
-	glVertex2f(20, -20);
-	glVertex2f(0, 20);
+int aux = 1;
+int aux2 = 0;
+
+
+
+void Eixo() {
+
+	glBegin(GL_LINES);
+	glColor3f(1, 0, 0);
+	//Eixo x
+	glVertex2f(-10, 0);
+	glVertex2f(10, 0);
+
+	//Eixo y
+	glVertex2f(0, -10);
+	glVertex2f(0, 10);
+
 	glEnd();
 }
 
-void objeto2()
-{
-	glColor3f(R, G, B);
-	glBegin(GL_POLYGON);
-	glVertex2f(-20, -20);
-	glVertex2f(20, -20);
-	glVertex2f(20, 20);
-	glVertex2f(-20, 20);
+
+void Funcao01() {
+	//Função de segundo grau
+	float x, y;
+
+	glColor3f(0, 0, 1);
+	glBegin(GL_POINTS);
+	
+
+	for (x = -10; x <= 10; x += 0.01) {
+		y = x;
+		glVertex2f(x, y);
+		}
+
 	glEnd();
 }
 
-void redesenha()
-{
-	glClearColor(1, 1, 1, 1);
-	glClear(GL_COLOR_BUFFER_BIT);
+
+
+void Funcao02() {
+	//Função de segundo grau
+	float x, y;
+
+	glColor3f(0, 0, 1);
+	glBegin(GL_POINTS);
+	
+
+	for (x = -10; x <= 10; x += 0.01) {
+		y = x*x;
+		glVertex2f(x, y);
+		}
+
+	glEnd();
+}
+
+void Funcao03() {
+	//Função de segundo grau
+	float x, y;
+
+	glColor3f(0, 0, 1);
+	glBegin(GL_POINTS);
+	
+
+	for (x = -10; x <= 10; x += 0.01) {
+		y = sin(x);
+		glVertex2f(x, y);
+		}
+
+	glEnd();
+}
+
+void redesenha(){
+
+	glClearColor(1.0, 1.0, 1.0, 1.0);
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
 	if (aux == 1)
-		objeto1();
-	if (aux == 2)
-		objeto2();
+		Eixo();
+	if (aux2 == 1)
+		Funcao01();
+	if (aux2 == 2)
+		Funcao02();
+	if (aux2 == 3)
+		Funcao03();
+
 	glFlush();
 }
 
-void teclado(unsigned char key, int x, int y)
-{
-	switch (key)
-	{
+void teclado(unsigned char key, int x, int y){
+
+	switch (key) {
 	case '1':
-		aux = 1;
+		aux2 = 1;
 		break;
 	case '2':
-		aux = 2;
+		aux2 = 2;
 		break;
-	case 'r':
-		aux = 0;
-		R = 0; G = 0; B = 1;
+	case '3':
+		aux2 = 3;
 		break;
-	case 'R':
-		aux = 0;
-		R = 0; G = 0; B = 1;
+	case 'E':
+	case 'e':
+		aux = aux *(-1);
 		break;
 	}
 	redesenha();
 }
 
-void mouse(int button, int state, int x, int y)
-{
-	switch (button)
-	{
-	case GLUT_LEFT_BUTTON:
-		R = 0; G = 1; B = 0;
-		redesenha();
-		break;
-	case GLUT_RIGHT_BUTTON:
-		R = 1; G = 0; B = 0;
-		redesenha();
-		break;
+void main(int argc, char **argv){
+	glutInit(&argc, argv);
+	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGBA | GLUT_DEPTH);
+	glutInitWindowSize(400, 400);
+	glutInitWindowPosition(10, 100);
+	glutCreateWindow("Nathaly");
+	glutKeyboardFunc(teclado);
+	//permite a utilização do teclado
+	gluOrtho2D(-10, 10, -10, 10);
+	glutDisplayFunc(redesenha);
+	glutMainLoop();
 	}
-}
-*/
-
-
-//void main(int argc, char **argv) {
-//	glutInit(&argc, argv);
-//	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGBA | GLUT_DEPTH);
-//	glutInitWindowSize(DIM, DIM);
-//	glutInitWindowPosition(200, 200);
-//	glutCreateWindow("Clique Mouse");
-//	gluOrtho2D(-size, size, -size, size);
-//	glutDisplayFunc(redesenha);
-//	glutMouseFunc(mouse);
-//	glutKeyboardFunc(teclado);
-//	glutMainLoop();
-//}
