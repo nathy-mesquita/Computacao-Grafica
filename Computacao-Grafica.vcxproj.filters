@@ -27,5 +27,8 @@
     <ClCompile Include="Lista 6.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Lista 7.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

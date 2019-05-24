@@ -150,6 +150,7 @@
     <ClCompile Include="Lista 4.2.cpp" />
     <ClCompile Include="Lista 5.cpp" />
     <ClCompile Include="Lista 6.cpp" />
+    <ClCompile Include="Lista 7.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
