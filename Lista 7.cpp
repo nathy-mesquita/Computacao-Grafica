@@ -7,12 +7,14 @@ Ao Iniciar o programa>
 [D]=> Voltar ao estágio inicial
 À Determinação do objeto>
 Teclado-[P]=> O usuário define o tipo de polígono com as coordenadas X, Y
+	   -[H]=> O usuário define o tipo de polígono com as coordenadas X, Y ja existentes
 Mouse- [Botão direito]=> Trasforma as coordenadas X, Y do objeto*/
 
 #include <vector> //pilhas
 #include <glut.h>
 #include <stdio.h> //input e output
 //nessa ordem, pois a vector é de c++ e as outras de c
+
 using namespace std;
 
 float DIM = 500;
@@ -99,8 +101,21 @@ void teclado(unsigned char key, int x, int y) {
 		}
 		break;
 
-		redesenha();
+	case 'h':
+	case 'H':
+		printf("Numeros de Vertices: ");
+		scanf_s("%d", &n);
+		for (int i = 0; i < n; i++) {
+			printf("x[%d] = ", i);
+			scanf_s("%f", &aux_x);
+			printf("y[%d] = ", i);
+			scanf_s("%f", &aux_y);
+			px.push_back(aux_x); //insere na pilha. para retirar, seria o pop
+			py.push_back(aux_y);
+		}
+		break;
 
+		redesenha();
 	}
 }
 
