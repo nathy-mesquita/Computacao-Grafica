@@ -7,7 +7,7 @@ Ao Iniciar o programa>
 [D]=> Voltar ao estágio inicial
 À Determinação do objeto>
 Teclado-[P]=> O usuário define o tipo de polígono com as coordenadas X, Y
-	   -[H]=> O usuário define o tipo de polígono com as coordenadas X, Y ja existentes
+Teclado-[H]=> O usuário define o tipo de polígono com as coordenadas X, Y ja existentes
 Mouse- [Botão direito]=> Trasforma as coordenadas X, Y do objeto*/
 
 #include <vector> //pilhas
