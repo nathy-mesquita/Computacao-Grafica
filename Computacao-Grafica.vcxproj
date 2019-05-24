@@ -152,6 +152,9 @@
     <ClCompile Include="Lista 6.cpp" />
     <ClCompile Include="Lista 7.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Lista 7.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

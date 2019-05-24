@@ -24,9 +24,7 @@ void objeto1(){
 	glVertex2f(0, 20);
 	glEnd();
 }
-*/
 
-/*
 void objeto2(){
 	glColor3f(R, G, B);
 	glBegin(GL_POLYGON);
@@ -36,8 +34,7 @@ void objeto2(){
 	glVertex2f(-20, 20);
 	glEnd();
 }
-*/
-/*
+
 void redesenha(){
 	glClearColor(1, 1, 1, 1);
 	glClear(GL_COLOR_BUFFER_BIT);
@@ -48,8 +45,7 @@ void redesenha(){
 	glFlush();
 
 }
-*/
-/*
+
 void teclado(unsigned char key, int x, int y){
 
 	switch (key){
@@ -70,8 +66,7 @@ void teclado(unsigned char key, int x, int y){
 	}
 	redesenha();
 }
-*/
-/*
+
 void mouse(int button, int state, int x, int y){
 
 	switch (button){
@@ -86,8 +81,7 @@ void mouse(int button, int state, int x, int y){
 	}
 
 }
-*/
-/*
+
 void main(int argc, char **argv) {
 
 	glutInit(&argc, argv);

@@ -2,7 +2,7 @@
 Ao digitar 1 exiba uma função do primeiro grau
 Ao digitar 2 exiba uma função do segundo grau
 Ao digitar 3 exiba uma função da sua escolha*/
-
+/*
 #include <cmath>
 #include <glut.h>
 
@@ -123,4 +123,4 @@ void main(int argc, char **argv){
 	gluOrtho2D(-10, 10, -10, 10);
 	glutDisplayFunc(redesenha);
 	glutMainLoop();
-	}
+	}*/

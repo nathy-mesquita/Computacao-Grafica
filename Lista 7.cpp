@@ -18,19 +18,19 @@ Mouse- [Botão direito]=> Trasforma as coordenadas X, Y do objeto*/
 using namespace std;
 
 float DIM = 500;
-float size = 10;
+float  size = 10;
 float r = 0.7, g = 0.5, b = 0.2;
 vector<float> px;
 vector<float> py;
 
 //inicialmente null
 
-void objeto() {
+void objeto(){
 	glColor3f(r, g, b);
 	glBegin(GL_POLYGON);
-	for (int i = 0; i <= px.size() && i <= py.size(); i++) {
+	for (int i = 0; i < px.size(); i++) {
 		glVertex2f(px[i], py[i]);
-	}
+	}	//&& i <= py.size()
 	glEnd();
 }
 
@@ -124,13 +124,11 @@ void mouse(int button, int state, int x, int y) {
 	switch (button) {
 	case GLUT_RIGHT_BUTTON:
 		if (state == GLUT_DOWN) {
-			glutPostRedisplay();
 			printf("\n x = %d      y = %d", x, y);
 			px.push_back(x);
 			py.push_back(y);
-			printf("\n%f %f", px, py);
+			//printf("\n%f %f", px, py);
 		}
-		glutPostRedisplay();
 		break;
 	}
 	redesenha();
